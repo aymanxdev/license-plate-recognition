@@ -69,3 +69,4 @@ and the recognition rate of the system.
 
 ![](https://github.com/aymanxdev/license-plate-recognition/blob/main/output_screenshot_1.png)
 
+![](https://github.com/aymanxdev/license-plate-recognition/blob/main/output_screenshot_2.png)
