@@ -1,27 +1,27 @@
-# License Plate Recognition Application -MATLAB
+# Number Plate Recognition Application -MATLAB
 
 
-This design mainly studies the design of vehicle number plate classification system based on MATLAB software. The system mainly includes five core parts: image acquisition, image preprocessing, license plate location, character segmentation and character recognition. The image preprocessing module of the system converts the image into a binary image which is easy to locate the license plate through the operation of image graying, image enhancement, edge extraction and binarization. It uses the edge and shape characteristics of the license plate, and combines Roberts operator edge detection, digital image, morphology and other technologies to locate the license plate. The method of character segmentation is to find the continuous block of characters in the binary license plate, and cut if the length is longer than the set threshold, so as to complete the character segmentation. Character recognition is accomplished by template matching algorithm. Each of the above function modules is realized by MATLAB software. Finally, the license plate is identified. At the same time, the problems in the design are analyzed and dealt with concretely, and better methods are sought.
+This design mainly studies the design of vehicle number plate classification system based on MATLAB software. The system mainly includes five core parts: image acquisition, image preprocessing, number plate location, character segmentation and character recognition. The image preprocessing module of the system converts the image into a binary image which is easy to locate the license plate through the operation of image graying, image enhancement, edge extraction and binarization. It uses the edge and shape characteristics of the number plate, and combines Roberts operator edge detection, digital image, morphology and other technologies to locate the number plate. The method of character segmentation is to find the continuous block of characters in the binary number plate, and cut if the length is longer than the set threshold, so as to complete the character segmentation. Character recognition is accomplished by template matching algorithm. Each of the above function modules is realized by MATLAB software. Finally, the number plate is identified. At the same time, the problems in the design are analyzed and dealt with concretely, and better methods are sought.
 
 ### Implementation and Design:
-License plate recognition system includes:   
+Number plate recognition system includes:   
 - image acquisition
 - image preprocessing 
-- license plate location 
+- number plate location 
 - character segmentation 
 - character recognition   
 
 
 The system is mainly composed of image processing and character recognition. Where the image processing portion includes a map
-Like preprocessing, edge extraction modules, license plate positioning, and segmentation modules. Character recognition part can be divided into words
+Like preprocessing, edge extraction modules, number plate positioning, and segmentation modules. Character recognition part can be divided into words
 Image grayscale and image edge extraction.
 
-License plate location and license plate segmentation are the key to the entire system, and its role is in grayscale after image pre-processing.
-Determining the specific location of the license plate in the image and segmenting a sub-image containing the license plate character from the entire image
-result. For the recognition of the character recognition subsystem, the accuracy of the segmentation is directly related to the entire license plate character
+number plate location and number plate segmentation are the key to the entire system, and its role is in grayscale after image pre-processing.
+Determining the specific location of the number plate in the image and segmenting a sub-image containing the number plate character from the entire image
+result. For the recognition of the character recognition subsystem, the accuracy of the segmentation is directly related to the entire number plate character
 and the recognition rate of the system.
 
-#### The ultimate goal of the license plate recognition system is to identify unclear license plate photos and output a clear picture plus outputs every number and character on the license plate
+#### The ultimate goal of the number plate recognition system is to identify unclear number plate photos and output a clear picture plus outputs every number and character on the number plate
 
 ### Flowchart
 ![flowchart](https://github.com/aymanxdev/license-plate-recognition/blob/main/flowchart.png)
@@ -36,14 +36,14 @@ and the recognition rate of the system.
 6.	Generate a zero pin for y*1
 7.	If the myI image coordinates are (i, j), the point value is 1, that is, the background color is blue, blue plus one
 8.	Blue pixel count
-9.	Y-direction license plate area determination
+9.	Y-direction number plate area determination
 10.	Temp is the maximum value of the element of the vector yellow_y, MaxY is the index of the value
-11.	X-direction license plate area determination
-12.	Further confirm the license plate area in the x direction
-13.	Correction of the license plate area
-14.	Write colored license plates to the dw file
-15.	Reading license plate
-16.	Convert license plate image to grayscale image
+11.	X-direction number plate area determination
+12.	Further confirm the number plate area in the x direction
+13.	Correction of the number plate area
+14.	Write colored number plates to the dw file
+15.	Reading number plate
+16.	Convert number plate image to grayscale image
 17.	Write a grayscale image to a file
 18.	T is the threshold of binarization
 19.	Binary image
